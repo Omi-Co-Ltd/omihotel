@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>OMI HOTEL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="OMI HOTEL 公式サイト">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/openclose.js"></script>
+<script src="js/fixmenu_pagetop.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/calender.js" charset="UTF-8"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="Sample Business Hotel"></a></h1>
+<p id="tel">ご予約・お問い合わせ<br>
+<span class="big1">0130-03-03-03</span><br>
+<span class="mini1">AM8:00〜PM9:00 年中無休</span></p>
+</header>
+
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li><a href="info.html">Information<span>ホテルのご案内</span></a></li>
+<li><a href="service.html">Service<span>サービスのご案内</span></a></li>
+<li><a href="plan.html">Plan<span>ご宿泊プラン</span></a></li>
+<li><a href="access.html">Access<span>アクセス・周辺環境</span></a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf4o3e5NKMdJX-DTGCScxROtP-5_ttqaXR-ZWEPJpDVaLDDTw/viewform?usp=sf_link">Contact<span>お問合せ・ご予約</span></a></li>
+</ul>
+</nav>
+
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li class="current"><a href="index.html">Home<span>ホーム</span></a></li>
+<li><a href="info.html">Information<span>ホテルのご案内</span></a></li>
+<li><a href="service.html">Service<span>サービスのご案内</span></a></li>
+<li><a href="plan.html">Plan<span>ご宿泊プラン</span></a></li>
+<li><a href="access.html">Access<span>アクセス・周辺環境</span></a></li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf4o3e5NKMdJX-DTGCScxROtP-5_ttqaXR-ZWEPJpDVaLDDTw/viewform?usp=sf_link">Contact<span>お問合せ・ご予約</span></a></li>
+</ul>
+</nav>
+
+<div id="contents">
+
+<div id="main">
+
+<section>
+
+<h2>サービスのご案内</h2>
+
+<div class="list">
+<h4>麦茶無料</h4>
+<figure><img src="images/sample7.jpg" alt="麦茶無料"></figure>
+<p>麦茶を無料で飲めます。</p>
+</div>
+
+<div class="list">
+<h4>FreeWIFI完備</h4>
+<figure><img src="images/sample8.jpg" alt="FreeWIFI完備"></figure>
+<p>高速通信に対応したFreeWIFIをご利用いただけます。</p>
+</div>
+
+<div class="list">
+	<h4>充電器貸し出し無料</h4>
+	<figure><img src="images/sample9.jpg" alt="充電器貸し出し無料"></figure>
+	<p>充電器を無料で貸し出しいたします。</p>
+	</div>
+
+</section>
+
+</div>
+<!--/main-->
+
+<div id="sub">
+
+	<nav class="box">
+		<h2>SUB MENU</h2>
+		<ul class="submenu">
+		<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSf4o3e5NKMdJX-DTGCScxROtP-5_ttqaXR-ZWEPJpDVaLDDTw/viewform?usp=sf_link">ご予約フォーム</a></li>
+		<li><a href="https://omi-co-ltd.github.io/on/index.html">尾身株式会社 公式ホームページ</a></li>
+		</ul>
+		</nav>
+		
+		<section class="box">
+		<h2>カレンダー</h2>
+			<div id="cal1" style="padding:10px"></div>
+			<div id="cal2" style="padding:10px"></div>
+		</section>
+		
+		</div>
+		<!--/sub-->
+		
+		</div>
+		<!--/contents-->
+		
+		</div>
+		<!--/container-->
+		
+		<footer>
+		<small>Copyright&copy; <a href="index.html">OMI HOTEL</a> All Rights Reserved.</small>
+		</footer>
+		
+		<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+		
+		<!--メニュー開閉ボタン-->
+		<div id="menubar_hdr" class="close"></div>
+		
+		<!--メニューの開閉処理条件設定　800px以下-->
+		<script>
+		if (OCwindowWidth() <= 800) {
+			open_close("menubar_hdr", "menubar-s");
+		}
+		</script>
+		<script type="text/javascript"><!--
+			var yy, mm;
+			// 今月
+			today = new Date();
+			// 特定の年月の表示をする場合
+			//	today.setMonth(8);	// 月-1
+			//	today.setFullYear(2018);
+			yy = today.getFullYear();
+			mm = today.getMonth() + 1;
+			document.getElementById('cal1').innerHTML = put_calender(yy, mm, 'cal', 'hcal', '', '');
+			// 翌月
+			if (mm > 11) {
+				mm = 0;
+				yy += 1;
+				today.setFullYear(yy);
+			}
+			today.setMonth(mm);
+			yy = today.getFullYear();
+			mm = today.getMonth() + 1;
+			document.getElementById('cal2').innerHTML = put_calender(yy, mm, 'cal', 'hcal', '', '');
+			//--></script>	
+		</body>
+		</html>
